@@ -73,8 +73,18 @@ echo "The square is {$square->width}00 cm wider \n";
 //accessing the array
 echo "This shows {$arr['key']} \n";
 echo "This access data key as {$arr[DATA_KEY]} \n";
-echo "This access array as {$arr['foo'][1]}";
+echo "This access array as {$arr['foo'][1]} \n";
 
 /**
- * String access and modification
+ * replacing character inside string
  */
+//access first character of the string
+$first_string = "This is a string";
+echo $first_string[0] . "\n";
+
+//access third character
+echo $first_string[2]."\n";
+
+//Get last character of the string
+//To get the total no. of characters in a string use mb_strlen
+echo $first_string[mb_strlen($first_string) - 1];
