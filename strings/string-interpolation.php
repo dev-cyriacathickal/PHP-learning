@@ -83,8 +83,12 @@ $first_string = "This is a string";
 echo $first_string[0] . "\n";
 
 //access third character
-echo $first_string[2]."\n";
+echo $first_string[2] . "\n";
 
 //Get last character of the string
 //To get the total no. of characters in a string use mb_strlen
-echo $first_string[mb_strlen($first_string) - 1];
+echo $first_string[mb_strlen($first_string) - 1]."\n";
+
+//Modify last character in string
+$first_string[mb_strlen($first_string) - 1] = 'k';
+echo $first_string;
