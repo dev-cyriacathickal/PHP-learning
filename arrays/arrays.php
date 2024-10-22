@@ -15,6 +15,7 @@ var_dump($short_array);
 
 /**
  * Type casting & overwriting
+ * Type casting is the process of converting a value from one data type to another data type.
  * values casted to one are overwritten on every new element
  */
 $casting_array = array(
@@ -114,7 +115,7 @@ unset($custom_array[5]);
 var_dump($custom_array);
 
 unset($custom_array);
-var_dump($custom_array);
+//var_dump($custom_array);
 
 //Exercise
 //Create an array
@@ -127,7 +128,50 @@ endforeach;
 
 var_dump($exp_array);
 
+$exp_array[] = 6;
+var_dump($exp_array);
 
-$exmp_array = array(1, 2, 3, 4, 5);
-$exmp_array[] = 6;
+//Reindex
+$exmp_array = array_values($exp_array);
+$exmp_array[] = 7;
 var_dump($exmp_array);
+
+/**
+ * array destructuring
+ */
+$source_array = array('foo', 'barbar', 'test');
+[$foo, $bar, $test] = $source_array;
+var_dump($foo . "\n" . $bar . "\n" . $test);
+
+//destructuring a multidimensional array using foreach
+$multi_array = array(
+    array(1, 'jhon'),
+    array(2, 'michael')
+);
+foreach ($multi_array as [$id, $name]):
+    echo $id . "\n";
+    echo $name . "\n";
+endforeach;
+
+//Assigning particular index using destructuring
+$another_source_array = array('foo', 'barbar', 'testdata');
+[,, $testdata] = $another_source_array;
+var_dump($testdata);
+
+//in associative array
+$src_associative_array = array('foo' => 1, 'bar' => 2, 'baz' => 3);
+['baz' => $baz] = $src_associative_array;
+var_dump($baz);
+
+$simple_asc_array = array('foo','bar','baz');
+[1 => $bar] = $simple_asc_array;
+var_dump($bar);
+
+
+//swap
+
+$a = 2;
+$b = 3;
+[$a,$b] = [$b,$a];
+var_dump("a is: ".$a);
+var_dump("b is: ".$b);
