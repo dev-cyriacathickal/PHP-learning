@@ -8,7 +8,7 @@ class Car {
         $this->color = $color;
     }
 
-    public function getColor() {
+    public function getColor(): string {
         return $this->color;
     }
 }
