@@ -13,18 +13,7 @@ $short_array = [
 var_dump($array);
 var_dump($short_array);
 
-/**
- * Type casting & overwriting
- * Type casting is the process of converting a value from one data type to another data type.
- * values casted to one are overwritten on every new element
- */
-$casting_array = array(
-    1 => 'testone',
-    '1' => 'testtwo',
-    true => 'testthree',
-    1.3 => 'testfour'
-);
-var_dump($casting_array);
+
 
 /**
  * Mixed int and string keys
@@ -66,20 +55,7 @@ var_dump($key_not_on_all);
 $simple_array = array('testone', 'testtwo', 'testthree');
 var_dump($simple_array[1]);
 
-//For multidimentional array
-$multi_dimentional_array = array(
-    'first_key' => 'firstParam',
-    'foo' => 'fooVal',
-    'multi' => array(
-        'dimentional' => 'val',
-        'array' => 'val2'
-    )
-);
-var_dump($multi_dimentional_array['first_key']);
-var_dump($multi_dimentional_array['foo']);
-var_dump($multi_dimentional_array['multi']);
-var_dump($multi_dimentional_array['multi']['dimentional']);
-var_dump($multi_dimentional_array['multi']['array']);
+
 
 /**
  * array dereferencing
@@ -175,3 +151,5 @@ $b = 3;
 [$a,$b] = [$b,$a];
 var_dump("a is: ".$a);
 var_dump("b is: ".$b);
+
+
